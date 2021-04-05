@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <!-- The resource is the acl name -->
+        <add id="Jeff_SimpleNews::main_menu" 
+            title="LXR Product Feed" 
+            module="Jeff_SimpleNews" 
+            sortOrder="200" 
+            resource="Jeff_SimpleNews::simplenews" />
+
+        <add id="Jeff_SimpleNews::add_news" 
+            title="Add Feed" 
+            module="Jeff_SimpleNews" 
+            sortOrder="1" 
+            parent="Jeff_SimpleNews::main_menu" 
+            action="simplenews/news/new" 
+            resource="Jeff_SimpleNews::manage_news" />
+
+        <add id="Jeff_SimpleNews::manage_news" 
+            title="Manage Feed" 
+            module="Jeff_SimpleNews" 
+            sortOrder="2" 
+            parent="Jeff_SimpleNews::main_menu" 
+            action="simplenews/news/index" 
+            resource="Jeff_SimpleNews::manage_news" />
+		
+        <add id="Jeff_SimpleNews::configuration" 
+            title="Configuration" 
+            module="Jeff_SimpleNews" 
+            sortOrder="3" 
+            parent="Jeff_SimpleNews::main_menu" 
+            action="adminhtml/system_config/edit/section/simplenews" 
+            resource="Jeff_SimpleNews::configuration" />
+    </menu>
+</config>
