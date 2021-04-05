@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="3columns" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <update handle="news_news" />
+    <body>
+        <referenceContainer name="content">
+            <block class="Jeff\SimpleNews\Block\View" name="jeff_simplenews_news_view" template="Jeff_SimpleNews::view.phtml" />
+        </referenceContainer>
+    </body> 
+</page>
